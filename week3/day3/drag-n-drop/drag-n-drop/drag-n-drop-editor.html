@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/editor.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Drag & Drop HTML Editor</h1>
+    </header>
+    <aside id="sidebar-content" class="sidebar-content">
+      <div class="">
+        <form class="content-frm" name="frm" id="frm">
+          <label for="title">Title:</label>
+          <input type="text" name="title" value="" id="title">
+          <label for="content">Content:</label>
+          <textarea id="content" name="content" rows="5"></textarea>
+          <button type="button" id="submit-button" name="button" >Submit</button>
+        </form>
+      </div>
+      <div id="content-container" class="content-container" >
+        <p>Drag Content:</p>
+        <div id="drag-content-inner" class="inner" draggable="true" ondrag = 'drag(this,event);' contenteditable="false">
+          <h2 id="h-title"></h2>
+          <p id="p-contnet"></p>
+        </div>
+      </div>
+      <div id="img-container" class="">
+        <ul id="img-list" class="list">
+          <!-- load images to list with dom -->
+        </ul>
+      </div>
+    </aside>
+    <section id="main-content" class="main-content" >
+      <!-- main article -->
+      <div id="upper-content" class="upper-content">
+        <!-- main image article -->
+        <div id="upper-dragend-img" class="upper-drag-end-img drop-target">
+            <!-- <p>Drop Image Here...</p> -->
+        </div>
+        <!-- main text article -->
+        <div id="upper-drag-end-txt" class="upper-drag-end-txt drop-target">
+          <!-- <p>Drop Text Here...</p> -->
+        </div>
+      </div>
+      <!-- main sub articles -->
+      <div class="upper-content">
+        <!-- sub article - left -->
+        <div class="down-left-dragend">
+          <div id="down-left-dragend-img" class="upper-drag-end-img drop-target">
+            <!-- <img src="" alt=""> -->
+          </div>
+          <div id="down-left-dragend-txt" class="upper-drag-end-txt drop-target">
+            <!-- <p></p> -->
+          </div>
+        </div>
+        <!-- sub article - right -->
+        <div class="down-right-dragend">
+          <div id="down-right-dragend-img" class="upper-drag-end-img drop-target">
+            <!-- <img src="" alt=""> -->
+          </div>
+          <div id="down-right-dragend-txt" class="upper-drag-end-txt drop-target">
+            <!-- <p></p> -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <button type="button" onclick="createFile()">Fetch Content</button>
+
+    <script type="text/javascript">
+      init();
+
+      function createFile(){
+         const secmain = document.getElementById('main-content');
+         // alert(secmain.innerHTML);
+
+        const obJson = {
+          txt : ""
+        }
+
+        obJson.txt = secmain.innerHTML;
+
+        fetch('http://localhost:3000/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(obJson)
+          })
+          .then(response => response.json())
+          .then(data => console.log(data));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Loop&display=swap');
+
+.navbar {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.nav-padding{
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+.navbar-brand{
+    margin-right: 10vh !important;
+}
+.nav-link.active{
+    margin-left: 2vh;
+    margin-right: 5vh;
+}
+.nav-item.active.is{
+    margin-right: 2vh;
+    margin-left: 2vh;
+}
+header,
+h2,
+body {
+    font-family: 'Zen Loop', cursive;
+    font-weight: bold;
+}
+header {
+    /* background-image: url("./img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat; */
+    /* height: 50vh;
+    position: absolute;
+    width: 100%; */
+  }
+h2 {
+    padding-top: 20px;
+    text-align: center;
+    font-size: 100px;
+}

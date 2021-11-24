@@ -1,0 +1,70 @@
+.background{
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0px;
+   
+}
+
+html,h1,h2,h3,h4,h5,h6,p,a{
+    font-family: "Indie Flower";
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+.navbar-light {
+    width:100%;
+    border-radius: 0%;
+}
+.btn {
+    justify-content: center;
+}
+.background{
+    /* background-attachment: fixed; */
+    background-size: cover;
+    background-position: center;
+}
+
+#overlay {
+    position: absolute; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba((230 172 172 / 22%)); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+  }
+  header{
+      display: flex;
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    background-image: url(background.jpg);
+    background-size: cover;
+    height: 300px;
+  }
+  .welcome {
+      width: 50%;
+
+  }
+  .nav-padding-zero{
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+
+  }
+.container-pf{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+
+}
+.h2{
+    text-align: center;
+}

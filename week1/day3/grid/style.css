@@ -1,0 +1,41 @@
+.outer-div {
+    display:grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 150px 250px ;
+    grid-gap: 10px;
+
+}
+.inner-div {
+    border:1px solid #000;
+    padding: 30px;
+
+
+}
+.box1{
+    background-color: #af47ff;
+    /* grid-column-start: 2; */
+    /* grid-column-end: 3; */
+    /* grid-column: 1 / span 2 / 3; */
+    grid-column-start: 1;
+    grid-column-start: span 3 ;
+
+
+}
+.box2{
+    background-color: #ff4797;
+}.box3{
+    background-color: #f3ff47;
+}
+.box4{
+    background-color: violet;
+}
+.box4{
+    background-color: yellowgreen;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.box5{
+    background-color: grey;
+    grid-row: 1/3;
+
+}

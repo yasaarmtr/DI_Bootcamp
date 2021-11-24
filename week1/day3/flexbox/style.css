@@ -1,0 +1,39 @@
+.outer-div{
+    display:flex;
+    /*row row-reverse column column-reverse*/
+    flex-direction: row;
+    /*center flex-start*/
+    justify-content:flex-start;
+    /**/
+    align-items: flex-start;
+
+
+}
+.inner-div{
+    border: 1px dotted #000;
+    padding: 30px;
+    text-align: center;
+
+}
+.box1{
+    background-color: #af47ff;
+    /*order:3;*/
+   /* align-self: flex-start;*/
+    flex-shrink: 3;
+
+}
+.box2{
+    background-color: red;
+    /*order:2;
+    align-self: stretch;*/
+    flex-grow: 3;
+
+
+
+}
+.box3{
+    background-color: blue;
+    /*order:1;*/
+    flex-shrink: 50;
+    
+}
