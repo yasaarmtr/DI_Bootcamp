@@ -1,0 +1,14 @@
+-- select avg(number_of_oscars) as average_number_of_oscars FROM actors1;
+
+-- select distinct first_name, last_name, number_of_oscars from actors1 order by number_of_oscars;
+
+-- SELECT * FROM actors1 WHERE first_name in ('David','Morgan','Brad','Will');
+
+select ta
+
+update actors1 set first_name='Braddy' where first_name='Brad' and last_name='Pitt';
+
+select * from actors1
+
+update actors1 set number_of_oscars=5 where first_name='George' and last_name='Clooney' returning actors1;
+
