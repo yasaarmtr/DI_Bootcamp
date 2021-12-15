@@ -78,8 +78,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'animal',
-        'USER': 'yasaar',
-        'PASSWORD': 'Mypg12',
+        'USER': 'postgres',
+        'PASSWORD': 'myPassword',
         'HOST': '127.0.0.1',
         'PORT': '5432', 
         #When you install PostgreSQL, the default port number is set to 5432.
