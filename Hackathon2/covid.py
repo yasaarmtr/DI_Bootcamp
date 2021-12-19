@@ -34,13 +34,13 @@ import requests
 """Confirmed cases"""
 url_confirmed = 'https://api.covid19api.com/dayone/country/mauritius/status/confirmed/live'
 data_confirmed = (requests.get(url_confirmed)).json()
-for i in data_confirmed:
-    case_confirmed = data_confirmed[i]["Cases"]
+# for i in data_confirmed:
+case_confirmed = data_confirmed[0]["Cases"]
     
 
 
 """Deaths cases"""
-url_deaths = 'https://api.covid19api.com/dayone/country/south-africa/status/deaths/live'
+url_deaths = 'https://api.covid19api.com/dayone/country/mauritius/status/deaths/live'
 data_deaths = (requests.get(url_deaths)).json()
 
 case_deaths = data_deaths[0]["Cases"]
@@ -52,7 +52,7 @@ data_recovered = (requests.get(url_recovered)).json()
 case_recovered = data_recovered[0]["Cases"]
 
 
-
+#function retrive data
 
 
 
