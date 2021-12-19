@@ -29,6 +29,39 @@ Created on Sat Dec 11 19:32:42 2021
 # ---------------------------------------------------------------------------------------
 
 import requests
+import psycopg2   # importing a module to connect to postgres
+import psycopg2.extras
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# defining our connection criteria
+HOSTNAME = 'localhost'
+USERNAME = 'yasaar'
+PASSWORD = '1234'
+DATABASE = 'covid'
+
+# making the connection to the database
+connection = psycopg2.connect(host=HOSTNAME, user=USERNAME, password=PASSWORD, dbname=DATABASE)
+
+# accessing the query editor
+# cursor = connection.cursor()
+cursor = connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+record_to_insert = ('date','case_confirmed' )
+
+
+# defining the query
+# query = "SELECT * FROM actors"
+
+# running the query
+# cursor.execute(query)
+
+# fetching the results
+# results = cursor.fetchall()
+
+# closing the connection
+connection.close()
 
 """Confirmed cases"""
 url_confirmed = 'https://api.covid19api.com/dayone/country/mauritius/status/confirmed/live'
@@ -39,11 +72,40 @@ for i in range(10):
     print (case_confirmed, date)
 next
     
+# Printing the variables
+print(case_confirmed)
+print(date)
+
+plt.plot(case_confirmed,date) # Function to plot
+plt.title('Confirm Cases') # Function to give title
+
+# Functions to give x and y labels
+plt.xlabel('Numeber of cases') 
+plt.ylabel('Date')
+
+# Functionn to show the graph  
+plt.show()
 
 
 
+# ------------------------------------------
+# # Generation of variables 
+# x=np.arange(0,10) #Array of range 0 to 9
+# y=x**3
 
+# # Printing the variables
+# print(x)
+# print(y)
 
+# plt.plot(x,y) # Function to plot
+# plt.title('Line Chart') # Function to give title
+
+# # Functions to give x and y labels
+# plt.xlabel('X-Axis') 
+# plt.ylabel('Y-Axis')
+
+# # Functionn to show the graph  
+# plt.show()
 
 
 
