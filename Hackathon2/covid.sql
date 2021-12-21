@@ -1,6 +1,6 @@
 create table covid(
-id serial primary key,
-confirmed integer
-deaths integer
-recovered integer
+	id serial primary key,
+	confirmed integer,
+	death integer,
+	recovered integer
 )
